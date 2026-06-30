@@ -54,9 +54,3 @@ void Complejo::imprime() {
 }
 
 
-int main(){
-    Complejo();
-    Complejo{2,3};
-    return 0;
-}
-
