@@ -19,25 +19,35 @@ void Complejo::agregar(Complejo& numero){
     imaginario = imaginario + numero.getImaginario();
 
 }
-/*
-Complejo Complejo::conjugado(Complejo valor){
-    return 0;
+
+Complejo Complejo::conjugado(){
+    return Complejo(real, -imaginario);
 }
 
 
-Complejo Complejo::suma(Complejo numero){
-    return 0;
+Complejo Complejo::suma(Complejo& numero){
+    double x = real + numero.getReal();
+    double y = imaginario + numero.getImaginario();
+    return Complejo(x,y);
 }
 
-Complejo Complejo::multiplicacion(Complejo numero){
-    return 0;
+Complejo Complejo::multiplicacion(Complejo& numero){
+    double C = numero.getReal();
+    double D = numero.getImaginario();
+
+    double vreal = (real*C)-(imaginario*D);
+    double vimag = (real*D)+(imaginario*C);
+    return Complejo(vreal,vimag);
 }
 
 Complejo Complejo::multiEscalar(double escalar){
-    return 0;
+    double x = real * escalar;
+    double y = imaginario * escalar;
+
+    return Complejo(x,y);
 
 }
-*/
+
 void Complejo::imprime() {
     std::cout<< "real" << real << " imaginario " << imaginario << std::endl;
 
